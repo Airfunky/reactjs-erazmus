@@ -1,4 +1,4 @@
-function Layout(props) {
+function Layout({title, description}) {
     return(
         <div
         style={{
@@ -9,8 +9,8 @@ function Layout(props) {
             color: "red",
         }}
         >
-            <h2>Title: {props.title}</h2>
-            <h2>Description: {props.description}</h2>
+            <h2>Title: {title}</h2>
+            <h2>Description: {description}</h2>
         </div>
     );
 }
