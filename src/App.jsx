@@ -1,26 +1,27 @@
-import StudentList from "./StudentList";
+import ProductList from "./ProductList";
 
 function App() {
-  const students = [
+  const products = [
   {
-    name: "Rahim",
-    age: 20,
-    city: "Dhaka"
+    name: "Laptop",
+    price: 800,
+    img: "laptop.jpg"
+    
   },
   {
-    name: "Jamal",
-    age: 25,
-    city: "warsaw"
+    name: "Phone",
+    price: 500,
+    img: "phone.jpg"
   },
   {
-    name: "Ariful",
-    age: 36,
-    city: "Faro"
+    name: "Headphone",
+    price: 100,
+    img: "headphone.jpg"
   }
 ];
 
   return (
-    <StudentList students = {students}/>
+    <ProductList products = {products}/>
   );
 }
 
