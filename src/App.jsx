@@ -9,12 +9,14 @@ function App(){
     "arivederci"
         ];
 
-    
+    const showStudents = ["Rahim", "Jamal"];
   return(
     <div>
-      {students.slice(3, 4).map((student, index) => (
-        <h2 key={index}> {student}</h2>
-      ))}
+      {students
+          .filter((student) => showStudents.includes(student))
+          .map((student, index) => (
+            <h2 key={index}>{student}</h2>
+          ))}
     </div>
   );  
 }
