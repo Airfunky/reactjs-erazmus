@@ -1,15 +1,16 @@
+import { useState } from "react";
 
 
 function App() {
  
-const stock = 5;
+const [isLogin, setIsLogin] = useState(false);
 
 return(
   <div>
-  {stock > 0
-    ? <h2>✅ In stock</h2>
-    : <h2>❌ Out of Stock</h2>
-  }
+    <h1>{isLogin ? "welcome!" : "Please Login"}</h1>
+    <button onClick={() => setIsLogin(!isLogin)}>
+      {isLogin ? "Logout" : "Login"}
+    </button>
   </div>
 ); 
 }
