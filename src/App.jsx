@@ -3,14 +3,14 @@ import { useState } from "react";
 
 function App() {
  
-const [isLogin, setIsLogin] = useState(false);
+const [show, setShow] = useState(false);
 
 return(
   <div>
-    <h1>{isLogin ? "welcome!" : "Please Login"}</h1>
-    <button onClick={() => setIsLogin(!isLogin)}>
-      {isLogin ? "Logout" : "Login"}
+    <button onClick={() => setShow(!show)}>
+      {show ? "Hide" : "Show"}
     </button>
+    {show && <h2>Welcome to React!</h2>}
   </div>
 ); 
 }
