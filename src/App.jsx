@@ -1,30 +1,15 @@
 import { useState } from "react";
 
 function App() {
-  function handleclick(){
-    alert("Hello!");
-  }
-
-  const [text, setText] = useState("siema");
-
-  const [liked, setLiked] = useState(false);
+ 
+  const [name, setName] = useState("");
 
   return (
     <div>
-      <button onClick={handleclick}>Touch me</button>
-
-     <br></br>
-
-      <h2>{text}</h2>
-      <button onClick={() => setText("Welcome to react")}>Change Text</button>
-
-      <br></br>
+      <input placeholder="Enter Name" onChange={ (e) => setName(e.target.value)}/>
     
-    <button onClick={() => setLiked(!liked)}>
-      {liked ? "Liked": "Like"}
-    </button>
-      
-    </div>
+     <h2>Hello {name}</h2>
+     </div>
   );
 }
 
