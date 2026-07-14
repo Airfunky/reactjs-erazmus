@@ -1,21 +1,19 @@
-import Header from "./Header";
-import Hero from "./Hero";
-import ProductList from "./ProductList";
-import Footer from "./Footer";
+import { useState } from "react";
 
 function App() {
-  
+  const [count, setCount] = useState (0);
+
   return (
     <div>
-      <Header title="SigmaShop" a1="Home" a2="Products" a3="About" a4="Contact"/>
+      <h1>{count}</h1>
 
-      <Hero search="Search Product..."  submit="Search" button1="Laptop" button2="Mobile" button3="Accessories" button4="Gaming"/>
-
-      <ProductList/>
-
-      <Footer text="&copy; SigmaShop | All rights reserved"/>
+      <button 
+        onClick={() => setCount(count + 1) }
+        >
+          Increase
+        </button>
     </div>
-  )
+  );
 }
 
 export default App;
